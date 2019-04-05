@@ -5,6 +5,15 @@ public class ClonTrooper {
     String especialidad;
     String armamento;
 
+    public ClonTrooper() {
+    }
+
+    public ClonTrooper(String rango, String especialidad, String armamento) {
+        this.rango = rango;
+        this.especialidad = especialidad;
+        this.armamento = armamento;
+    }
+
     public String getRango() {
         return rango;
     }
