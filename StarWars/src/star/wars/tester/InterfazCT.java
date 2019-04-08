@@ -2,6 +2,7 @@ package star.wars.tester;
 
 import fuerzas.imperiales.ClonTrooper;
 
+import java.awt.BorderLayout;
 import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -14,6 +15,8 @@ import javax.swing.JTextField;
 import javax.swing.JTextArea;
 
 public class InterfazCT extends JFrame {
+	private static final long serialVersionUID = 5081894783141919281L;
+
 	public InterfazCT() {
 		initComponents();
 	}
@@ -55,8 +58,6 @@ public class InterfazCT extends JFrame {
 		jPRoot.add(jLArmamento);
 		jPRoot.add(jTFArmamento);
 		jPRoot.setLayout(new GridLayout(2,2));
-
-		JPanel container = getContentPane();
 
 		add(jPRoot, BorderLayout.CENTER);
 		add(jBRenerarCT, BorderLayout.CENTER);
