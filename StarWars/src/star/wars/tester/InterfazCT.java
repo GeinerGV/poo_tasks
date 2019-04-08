@@ -30,7 +30,7 @@ public class InterfazCT extends JFrame {
 		jLArmamento = new JLabel("Armamento: ");
 		jTFArmamento = new JTextField();
 		jBRenerarCT = new JButton("Generar CT");
-		jTARespuesta = new JTextArea();
+		jTARespuesta = new JTextArea(3, 10);
 
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
 		setTitle("StarWars");
@@ -57,11 +57,11 @@ public class InterfazCT extends JFrame {
 		jPRoot.add(jTFEspecialidad);
 		jPRoot.add(jLArmamento);
 		jPRoot.add(jTFArmamento);
-		jPRoot.setLayout(new GridLayout(2,2));
+		jPRoot.setLayout(new GridLayout(3, 2));
 
-		add(jPRoot, BorderLayout.CENTER);
+		add(jPRoot, BorderLayout.NORTH);
 		add(jBRenerarCT, BorderLayout.CENTER);
-		add(jTARespuesta, BorderLayout.CENTER);
+		add(jTARespuesta, BorderLayout.SOUTH);
 		pack();
 
 
