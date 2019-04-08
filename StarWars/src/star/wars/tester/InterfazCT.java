@@ -1,5 +1,7 @@
 package star.wars.tester;
 
+import fuerzas.imperiales.ClonTrooper;
+
 import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -38,6 +40,7 @@ public class InterfazCT extends JFrame {
 				String strjTFEspecialidad = jTFEspecialidad.getText().trim();
 				String strjTFArmamento = jTFArmamento.getText().trim();
 				if (strjTFRango.length()>0 && strjTFEspecialidad.length()>0 && strjTFArmamento.length()>0) {
+					ClonTrooper ct = new ClonTrooper(strjTFRango, strjTFEspecialidad, strjTFArmamento);
 					jTARespuesta.setText("Rango: "+strjTFRango+"\nEspecialidad: "+strjTFEspecialidad+"\nArmamento: "+strjTFArmamento);
 				} else {
 					jTARespuesta.setText("Ingrese los datos");
