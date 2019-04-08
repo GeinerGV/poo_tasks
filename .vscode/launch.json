@@ -10,8 +10,8 @@
 			"request": "launch",
 			"mainClass": "${file}",
 			"console": "internalConsole",
-			"classPaths": ["bin/"],
-			"preLaunchTask": "0"
+			"classPaths": ["bin/"]
+			// "preLaunchTask": "build"
 		}
 	]
 }
