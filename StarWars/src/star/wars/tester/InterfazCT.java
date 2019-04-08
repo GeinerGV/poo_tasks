@@ -26,6 +26,21 @@ public class InterfazCT extends JFrame {
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
 		setTitle("StarWars");
 
+		jBRenerarCT.addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				String strjTFRango = jTFRango.getText().trim();
+				String strjTFEspecialidad = jTFEspecialidad.getText().trim();
+				String strjTFArmamento = jTFArmamento.getText().trim();
+				if (strjTFRango.length()>0 && strjTFEspecialidad.length()>0 && strjTFArmamento.length()>0) {
+					jTARespuesta.setText("Rango: "+strjTFRango+"\nEspecialidad: "+strjTFEspecialidad+"\nArmamento: "+strjTFArmamento);
+				} else {
+					jTARespuesta.setText("Ingrese los datos");
+				}
+			}
+		});
+
 		jPRoot.add(jLRango);
 		jPRoot.add(jTFRango);
 		jPRoot.add(jLEspecialidad);
