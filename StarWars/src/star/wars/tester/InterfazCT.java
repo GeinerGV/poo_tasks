@@ -59,8 +59,8 @@ public class InterfazCT extends JFrame {
 		jPRoot.add(jTFArmamento);
 		jPRoot.setLayout(new GridLayout(3, 2));
 
-		add(jPRoot, BorderLayout.NORTH);
-		add(jBRenerarCT, BorderLayout.CENTER);
+		add(jPRoot, BorderLayout.CENTER);
+		add(jBRenerarCT, BorderLayout.NORTH);
 		add(jTARespuesta, BorderLayout.SOUTH);
 		pack();
 

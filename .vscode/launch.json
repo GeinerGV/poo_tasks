@@ -6,12 +6,21 @@
 	"configurations": [
 		{
 			"type": "java",
+			"name": "CodeLens (Launch) - InterfazCT",
+			"request": "launch",
+			"mainClass": "star.wars.tester.InterfazCT",
+			"projectName": "poo_tasks_538c1aff"
+		},
+		{
+			"type": "java",
 			"name": "Debug (Launch) - Current File",
 			"request": "launch",
 			"mainClass": "${file}",
 			"console": "integratedTerminal",
-			"classPaths": ["bin/"]
-			// "preLaunchTask": "build"
+			"classPaths": [
+				"bin/"
+			],
+			"preLaunchTask": "Compilador de archivo *.java"
 		}
 	]
 }
