@@ -9,8 +9,9 @@
 			"name": "Debug (Launch) - Current File",
 			"request": "launch",
 			"mainClass": "${file}",
-			"console": "internalConsole",
-			"classPaths": ["bin/"]
+			"console": "integratedTerminal",
+			"classPaths": ["bin/"],
+			"preLaunchTask": "Compilador de archivo *.java"
 		}
 	]
 }
