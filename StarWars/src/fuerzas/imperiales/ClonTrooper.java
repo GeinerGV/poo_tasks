@@ -1,9 +1,9 @@
 package fuerzas.imperiales;
 
 public class ClonTrooper {
-    String rango;
-    String especialidad;
-    String armamento;
+    private String rango;
+    private String especialidad;
+    private String armamento;
 
     public ClonTrooper() {
     }
