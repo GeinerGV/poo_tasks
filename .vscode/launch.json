@@ -10,8 +10,9 @@
 			"request": "launch",
 			"mainClass": "${file}",
 			"console": "integratedTerminal",
-			"classPaths": ["bin/"],
-			"preLaunchTask": "Compilador de archivo *.java"
+			// "classPaths": ["bin/"],
+			// "preLaunchTask": "Compilador de archivo *.java",
+			"projectName": "${workspaceFolderBasename}_538c1aff"
 		}
 	]
 }
