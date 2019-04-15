@@ -5,17 +5,17 @@ package fuerzas.rebeldes;
  */
 public class XWing {
 
-	String fabricante = "Incom Corporation";
-	int costo_nuevo = 149999;
-	char armamento_canon = '1';
-	char armamento_misil = '1';
-	int max_aceleracion = 3700;
-	int autonomia = 100;
+	private String fabricante = "Incom Corporation";
+	private int costo_nuevo = 149999;
+	private char armamento_canon = '1';
+	private char armamento_misil = '1';
+	private int max_aceleracion = 3700;
+	private int autonomia = 100;
 
-	boolean rol_Space_starfighter;
-	boolean rol_Escort;
+	private boolean rol_Space_starfighter;
+	private boolean rol_Escort;
 
-	String id;
+	private String id;
 
 	/**
 	 * @return the fabricante
@@ -143,10 +143,10 @@ public class XWing {
 		this.id = id;
 	}
 
-	int misiles = 6;
-	int disparos = 0;
-	int velocidad = 0;
-	boolean en_vuelo = false;
+	private int misiles = 6;
+	private int disparos = 0;
+	private int velocidad = 0;
+	private boolean en_vuelo = false;
 
 	public void acelearar(int aceleracion) {
 		if (aceleracion>max_aceleracion) {
