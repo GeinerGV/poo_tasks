@@ -17,7 +17,7 @@ public class Alumno implements Serializable {
 		this.ciclo = ciclo;
 	}
 	
-	//@overwrite|override
+	@Override
 	public String toString() {
 		return codigo + "\t" + nombre + "\t" + apellido + "\t" + ciclo;
 	}
