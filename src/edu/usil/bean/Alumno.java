@@ -20,6 +20,6 @@ public class Alumno implements Serializable {
 	
 	@Override
 	public String toString() {
-		return codigo + "\t" + nombre + "\t" + apellido + "\t" + ciclo;
+		return "Código: "+codigo + "\n" + "Nombre: "+nombre + "\n" +"Apellidos: "+ apellido + "\n" + "Ciclo: "+ ciclo;
 	}
 }
