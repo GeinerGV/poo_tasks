@@ -6,17 +6,12 @@
 	"configurations": [
 		{
 			"type": "java",
-			"name": "CodeLens (Launch) - TestArray01",
-			"request": "launch",
-			"mainClass": "com.ejemplo.arreglos.TestArray01",
-			"projectName": "poo_tasks_538c1aff"
-		},
-		{
-			"type": "java",
 			"name": "Debug (Launch) - Current File",
 			"request": "launch",
 			"mainClass": "${file}",
 			"console": "integratedTerminal",
+			// "classPaths": ["bin/"],
+			// "preLaunchTask": "Compilador de archivo *.java",
 			"projectName": "${workspaceFolderBasename}_538c1aff"
 		}
 	]
