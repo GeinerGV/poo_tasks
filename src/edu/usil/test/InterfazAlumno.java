@@ -1,6 +1,15 @@
 package edu.usil.test;
 
+import java.awt.GridLayout;
+
+import javax.swing.GroupLayout;
+import javax.swing.JButton;
 import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JTextArea;
+import javax.swing.JTextField;
+import javax.swing.GroupLayout.Alignment;
 
 public class InterfazAlumno extends JFrame {
 	private static final long serialVersionUID = 5081894783141919281L;
@@ -10,9 +19,63 @@ public class InterfazAlumno extends JFrame {
 	}
 	
 	public void initComponents() {
-		
+		jPmain = new JPanel();
+		jPform = new JPanel();
+		jLcodigo = new JLabel("Código:");
+		jTFcodigo = new JTextField();
+		jLnombre = new JLabel("Nombre:");
+		jTFnombre = new JTextField();
+		jLapellido = new JLabel("Apellido:");
+		jTFapelldio = new JTextField();
+		jLciclo = new JLabel("Ciclo:");
+		jTFciclo = new JTextField();
+		jBcrearAlumno = new JButton("Crear Alumno");
+		jBverTodos = new JButton("Ver a todos");
+		jTAmostrarTexto = new JTextArea();
+
+		setTitle("Añadir alumnos a un arreglo");
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
 		
+		jPform.add(jLcodigo);
+		jPform.add(jTFcodigo);
+		jPform.add(jLnombre);
+		jPform.add(jTFnombre);
+		jPform.add(jLapellido);
+		jPform.add(jTFapelldio);
+		jPform.add(jLciclo);
+		jPform.add(jTFciclo);
+		jPform.setLayout(new GridLayout(4, 2));
+		
+		GroupLayout gLayout = new GroupLayout(jPmain);
+		jPmain.setLayout(gLayout);
+		gLayout.setHorizontalGroup(
+			gLayout.createParallelGroup(Alignment.CENTER)
+			.addGroup(gLayout.createSequentialGroup()
+				.addContainerGap()
+				.addGroup(gLayout.createParallelGroup(Alignment.CENTER)
+					.addComponent(jPform)
+					.addComponent(jBcrearAlumno)
+				)
+				.addContainerGap()
+				.addGroup(gLayout.createParallelGroup(Alignment.CENTER)
+					.addComponent(jBverTodos)
+					.addComponent(jTAmostrarTexto)
+				)
+				.addContainerGap()
+			)
+		);
+		gLayout.setVerticalGroup(
+			gLayout.createParallelGroup(Alignment.CENTER)
+			.addGroup(gLayout.createSequentialGroup()
+				.addComponent(jPform)
+				.addComponent(jBcrearAlumno)
+			)
+			.addGroup(gLayout.createSequentialGroup()
+				.addComponent(jBverTodos)
+				.addComponent(jTAmostrarTexto)
+			)
+		);
+		add(jPmain);
 	}
 	
 	public static void main(String[] args) {
@@ -41,4 +104,18 @@ public class InterfazAlumno extends JFrame {
 			}
 		});
 	}
+
+	private JPanel jPmain;
+	private JPanel jPform;
+	private JLabel jLcodigo;
+	private JTextField jTFcodigo;
+	private JLabel jLnombre;
+	private JTextField jTFnombre;
+	private JLabel jLapellido;
+	private JTextField jTFapelldio;
+	private JLabel jLciclo;
+	private JTextField jTFciclo;
+	private JButton jBcrearAlumno;
+	private JButton jBverTodos;
+	private JTextArea jTAmostrarTexto;
 }
