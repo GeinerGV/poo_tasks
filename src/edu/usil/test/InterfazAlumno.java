@@ -38,8 +38,8 @@ public class InterfazAlumno extends JFrame {
 		jTFapellido = new JTextField();
 		jLciclo = new JLabel("Ciclo:");
 		jTFciclo = new JTextField();
-		jBcrearAlumno = new JButton("Crear Alumno");
-		jBverTodos = new JButton("Ver a todos");
+		jBcrearAlumno = new JButton("Ingresar");
+		jBverTodos = new JButton("Listar");
 		jTAmostrarTexto = new JTextArea(5, 30);
 		jLdesc = new JLabel("Complete los espacios en blanco");
 		jSPtexto = new JScrollPane(jTAmostrarTexto);
