@@ -1,5 +1,6 @@
 package edu.usil.test;
 
+import java.awt.BorderLayout;
 import java.awt.GridLayout;
 
 import javax.swing.GroupLayout;
@@ -31,7 +32,7 @@ public class InterfazAlumno extends JFrame {
 		jTFciclo = new JTextField();
 		jBcrearAlumno = new JButton("Crear Alumno");
 		jBverTodos = new JButton("Ver a todos");
-		jTAmostrarTexto = new JTextArea();
+		jTAmostrarTexto = new JTextArea(5, 15);
 
 		setTitle("Añadir alumnos a un arreglo");
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
@@ -53,7 +54,7 @@ public class InterfazAlumno extends JFrame {
 			.addGroup(gLayout.createSequentialGroup()
 				.addContainerGap()
 				.addGroup(gLayout.createParallelGroup(Alignment.CENTER)
-					.addComponent(jPform)
+					.addComponent(jPform, GroupLayout.PREFERRED_SIZE, 150, GroupLayout.PREFERRED_SIZE)
 					.addComponent(jBcrearAlumno)
 				)
 				.addContainerGap()
@@ -67,7 +68,7 @@ public class InterfazAlumno extends JFrame {
 		gLayout.setVerticalGroup(
 			gLayout.createParallelGroup(Alignment.CENTER)
 			.addGroup(gLayout.createSequentialGroup()
-				.addComponent(jPform)
+				.addComponent(jPform, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
 				.addComponent(jBcrearAlumno)
 			)
 			.addGroup(gLayout.createSequentialGroup()
@@ -75,7 +76,8 @@ public class InterfazAlumno extends JFrame {
 				.addComponent(jTAmostrarTexto)
 			)
 		);
-		add(jPmain);
+		add(jPmain, BorderLayout.CENTER);
+		pack();
 	}
 	
 	public static void main(String[] args) {
