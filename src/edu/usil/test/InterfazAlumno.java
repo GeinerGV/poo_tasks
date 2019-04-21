@@ -2,15 +2,23 @@ package edu.usil.test;
 
 import java.awt.BorderLayout;
 import java.awt.GridLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.util.ArrayList;
 
 import javax.swing.GroupLayout;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
+import javax.swing.JScrollPane;
 import javax.swing.JTextArea;
 import javax.swing.JTextField;
 import javax.swing.GroupLayout.Alignment;
+
+import org.w3c.dom.ranges.RangeException;
+
+import edu.usil.bean.Alumno;
 
 public class InterfazAlumno extends JFrame {
 	private static final long serialVersionUID = 5081894783141919281L;
@@ -26,23 +34,80 @@ public class InterfazAlumno extends JFrame {
 		jTFcodigo = new JTextField();
 		jLnombre = new JLabel("Nombre:");
 		jTFnombre = new JTextField();
-		jLapellido = new JLabel("Apellido:");
-		jTFapelldio = new JTextField();
+		jLapellido = new JLabel("Apellidos:");
+		jTFapellido = new JTextField();
 		jLciclo = new JLabel("Ciclo:");
 		jTFciclo = new JTextField();
 		jBcrearAlumno = new JButton("Crear Alumno");
 		jBverTodos = new JButton("Ver a todos");
-		jTAmostrarTexto = new JTextArea(5, 15);
+		jTAmostrarTexto = new JTextArea(5, 30);
+		jLdesc = new JLabel("Complete los espacios en blanco");
+		jSPtexto = new JScrollPane(jTAmostrarTexto);
 
 		setTitle("Añadir alumnos a un arreglo");
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
+
+
+
+		jBcrearAlumno.addActionListener(new ActionListener(){
 		
+			@Override
+			public void actionPerformed(ActionEvent arg0) {
+				String code = jTFcodigo.getText().trim();
+				String name = jTFnombre.getText().trim();
+				String surname = jTFapellido.getText().trim();
+				String cicloStr = jTFciclo.getText().trim();
+				if (code.length()>0 && name.length()>0 && surname.length()>0 && cicloStr.length()>0){
+					int ciclo;
+					try {
+						ciclo = Integer.parseInt(cicloStr);
+						if (ciclo<0 || ciclo>10) throw new RangeException((short) 1, "El ciclo debe estar entre 0 y 10");
+						alumnos.add(new Alumno(code, name, surname, ciclo));
+						jTAmostrarTexto.setText("Último alumno ingresado:\n"+alumnos.get(alumnos.size()-1));
+						pack();
+					} catch (NumberFormatException e) {
+						jLdesc.setText("El ciclo necesita ser un número entero");
+					} catch (Exception e) {
+						jLdesc.setText(e.getMessage());
+					}
+				} else {
+					jLdesc.setText("Complete los espacios en blanco");
+				}
+			}
+		});
+
+		jBverTodos.addActionListener(new ActionListener(){
+		
+			@Override
+			public void actionPerformed(ActionEvent arg0) {
+				if (alumnos.size()>0) {
+					String texto = "";
+					int i=0;
+					for (Alumno alumno : alumnos) {
+						i++;
+						texto += "Estudiante "+i+":\n";
+						texto += alumno;
+						texto += "\n\n";
+					}
+					texto = texto.substring(0, texto.length()-2);
+					jTAmostrarTexto.setText(texto);
+				} else {
+					jTAmostrarTexto.setText("No se ha agregado ningún estudiante todavía.");
+					pack();
+				}
+			}
+		});
+		
+		jLapellido.setLabelFor(jTFcodigo);
+		jLapellido.setLabelFor(jTFnombre);
+		jLapellido.setLabelFor(jTFapellido);
+		jLapellido.setLabelFor(jTFciclo);
 		jPform.add(jLcodigo);
 		jPform.add(jTFcodigo);
 		jPform.add(jLnombre);
 		jPform.add(jTFnombre);
 		jPform.add(jLapellido);
-		jPform.add(jTFapelldio);
+		jPform.add(jTFapellido);
 		jPform.add(jLciclo);
 		jPform.add(jTFciclo);
 		jPform.setLayout(new GridLayout(4, 2));
@@ -54,13 +119,13 @@ public class InterfazAlumno extends JFrame {
 			.addGroup(gLayout.createSequentialGroup()
 				.addContainerGap()
 				.addGroup(gLayout.createParallelGroup(Alignment.CENTER)
-					.addComponent(jPform, GroupLayout.PREFERRED_SIZE, 150, GroupLayout.PREFERRED_SIZE)
+					.addComponent(jPform, GroupLayout.PREFERRED_SIZE, 250, GroupLayout.PREFERRED_SIZE)
 					.addComponent(jBcrearAlumno)
 				)
 				.addContainerGap()
 				.addGroup(gLayout.createParallelGroup(Alignment.CENTER)
 					.addComponent(jBverTodos)
-					.addComponent(jTAmostrarTexto)
+					.addComponent(jSPtexto)
 				)
 				.addContainerGap()
 			)
@@ -73,9 +138,10 @@ public class InterfazAlumno extends JFrame {
 			)
 			.addGroup(gLayout.createSequentialGroup()
 				.addComponent(jBverTodos)
-				.addComponent(jTAmostrarTexto)
+				.addComponent(jSPtexto)
 			)
 		);
+		add(jLdesc, BorderLayout.NORTH);
 		add(jPmain, BorderLayout.CENTER);
 		pack();
 	}
@@ -114,10 +180,13 @@ public class InterfazAlumno extends JFrame {
 	private JLabel jLnombre;
 	private JTextField jTFnombre;
 	private JLabel jLapellido;
-	private JTextField jTFapelldio;
+	private JTextField jTFapellido;
 	private JLabel jLciclo;
 	private JTextField jTFciclo;
 	private JButton jBcrearAlumno;
 	private JButton jBverTodos;
 	private JTextArea jTAmostrarTexto;
+	private JLabel jLdesc;
+	private ArrayList<Alumno> alumnos = new ArrayList<Alumno>();
+	private JScrollPane jSPtexto;
 }
