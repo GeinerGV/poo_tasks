@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class Ejercicio01 {
 	
 	public static void main(String[] args) {
-		Ejercicio01 eo1 = new Ejercicio01();
+		Ejercicio01 e01 = new Ejercicio01();
 		e01.promedio();
 	}
 	
@@ -19,6 +19,7 @@ public class Ejercicio01 {
 			numeros[i] = sc.nextInt();
 			suma += numeros[i];
 		}
+		sc.close();
 		
 		for (int i=0; i<numeros.length; i++) {
 			System.out.println("["+i+"]="+numeros[i]+"\t");

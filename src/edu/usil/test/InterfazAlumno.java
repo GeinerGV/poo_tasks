@@ -1,9 +1,11 @@
 package edu.usil.test;
 
+import javax.swing.JFrame;
+
 public class InterfazAlumno extends JFrame {
 	private static final long serialVersionUID = 5081894783141919281L;
 	
-	public Interfaz() {
+	public InterfazAlumno() {
 		initComponents();
 	}
 	

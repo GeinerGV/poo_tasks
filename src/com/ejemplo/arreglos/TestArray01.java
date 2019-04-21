@@ -7,7 +7,7 @@ public class TestArray01 {
 		
 		System.out.println("Array1 :");
 		for (int i=0; i<array1.length; i++) {
-			System.out.print("["+i+"]="}array1[i]+" , ");
+			System.out.print("["+i+"]="+array1[i]+" , ");
 		}
 		System.out.println("\n");
 		
@@ -18,13 +18,13 @@ public class TestArray01 {
 		
 		System.out.println("Array1 :");
 		for (int i=0; i<array1.length; i++) {
-			System.out.print("["+i+"]="}array1[i]+" , ");
+			System.out.print("["+i+"]="+array1[i]+" , ");
 		}
 		System.out.println("\n");
 		
 		System.out.println("Array2 :");
 		for (int i=0; i<array2.length; i++) {
-			System.out.print("["+i+"]="}array2[i]+" , ");
+			System.out.print("["+i+"]="+array2[i]+" , ");
 		}
 		System.out.println("\n");
 	}

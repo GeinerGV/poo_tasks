@@ -3,6 +3,7 @@ package edu.usil.bean;
 import java.io.Serializable;
 
 public class Alumno implements Serializable {
+	private static final long serialVersionUID = 858336669705994156L;
 	private String codigo;
 	private String nombre;
 	private String apellido;

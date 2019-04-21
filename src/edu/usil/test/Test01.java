@@ -32,13 +32,15 @@ public class Test01 {
 			System.out.println("Ingrese el ciclo");
 			int ciclo = sc.nextInt();
 			
+			sc.close();
+
 			Alumno a = new Alumno(codigo, nombre, apellido, ciclo);
 			alumnos[i] = a;
 		}
 	}
 	
 	public void listar() {
-		for (int i=0; i<n; i++) {
+		for (int i=0; i<alumnos.length; i++) {
 			System.out.println(alumnos[i]);
 		}
 	}
