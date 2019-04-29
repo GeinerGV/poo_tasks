@@ -1,16 +1,16 @@
 package ejercicios.propuestos;
 
 public class Camion extends Vehiculo {
-	private int numeroRuedas;
+	private int numeroEjes;
 	private int pesoMaximo;
 
-	public Camion(String marca, String color, int numeroRuedas, int pesoMaximo) {
+	public Camion(String marca, String color, int numeroEjes, int pesoMaximo) {
 		super(marca, color);
-		this.numeroRuedas = numeroRuedas;
+		this.numeroEjes = numeroEjes;
 		this.pesoMaximo = pesoMaximo;
 	}
 
 	public String toString() {
-		return "Camion("+marca+", "+color+", ruedas: "+numeroRuedas+", pesoMax: "+pesoMaximo+")";
+		return "Camion("+marca+", "+color+", "+numeroEjes+" ejes, pesoMax: "+pesoMaximo+")";
 	}
 }

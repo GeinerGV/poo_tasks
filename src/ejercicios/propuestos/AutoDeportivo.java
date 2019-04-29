@@ -10,6 +10,6 @@ public class AutoDeportivo extends Vehiculo {
 	}
 	
 	public String toString() {
-		return "AutoDeportivo("+marca+", "+color+", velMax: "+velocidadMaxima+")";
+		return "AutoDeportivo("+marca+", "+color+", velMax: "+velocidadMaxima+" mph)";
 	}
 }
