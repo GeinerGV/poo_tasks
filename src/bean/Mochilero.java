@@ -10,6 +10,8 @@ public class Mochilero extends Persona {
 	private String destinoFavorito;
 	private int tiempoDeMochilero;
 
+	public Mochilero() {}
+
 	public Mochilero(String nombre, String paisNacimiento, String paisResidencia, int edad, String destinoFavorito, int tiempoDeMochilero) {
 		super(nombre, paisNacimiento, paisResidencia, edad);
 		this.destinoFavorito = destinoFavorito;
