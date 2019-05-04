@@ -12,7 +12,7 @@
 			"console": "integratedTerminal",
 			// "classPaths": ["bin/"],
 			// "preLaunchTask": "Compilador de archivo *.java",
-			"projectName": "${workspaceFolderBasename}_538c1aff"
+			"projectName": "${workspaceFolderBasename}_5cbccf87"
 		}
 	]
 }

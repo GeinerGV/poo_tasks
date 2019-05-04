@@ -5,6 +5,6 @@
 		}
 	],
 	"settings": {
-		"java.autobuild.enabled": false
+		"java.autobuild.enabled": true
 	}
 }
