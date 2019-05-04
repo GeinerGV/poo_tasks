@@ -1,47 +1,30 @@
 package components;
 
-import java.awt.Component;
-import java.awt.event.ActionListener;
+import java.util.ArrayList;
 
-import javax.swing.ComboBoxEditor;
 import javax.swing.JComboBox;
+
+import xml.PaisesParser;
 
 /**
  * JListaPaises
  */
-public class JListaPaises extends JComboBox {
+public class JListaPaises extends JComboBox<String> {
 
-    public static class paisesEditor implements ComboBoxEditor {
+	private static final long serialVersionUID = 2958156257188013413L;
 
-        @Override
-        public Component getEditorComponent() {
-            return null;
-        }
+	private static final ArrayList<String> paises = PaisesParser.getAllPaisesList();
 
-        @Override
-        public void setItem(Object anObject) {
+	public JListaPaises() {
+		super(paises.toArray(new String[paises.size()]));
+		insertItemAt("", 0);
+		setSelectedIndex(0);
+		setEditable(true);
+	}
 
-        }
-
-        @Override
-        public Object getItem() {
-            return null;
-        }
-
-        @Override
-        public void selectAll() {
-
-        }
-
-        @Override
-        public void addActionListener(ActionListener l) {
-
-        }
-
-        @Override
-        public void removeActionListener(ActionListener l) {
-
-        }
-
-    }
+	@Override
+	public String getSelectedItem() {
+		return (String)super.getSelectedItem();
+	}
+	
 }

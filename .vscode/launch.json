@@ -12,7 +12,15 @@
 			"console": "integratedTerminal",
 			// "classPaths": ["bin/"],
 			// "preLaunchTask": "Compilador de archivo *.java",
-			"projectName": "${workspaceFolderBasename}_5cbccf87"
+			"projectName": "${workspaceFolderBasename}_538c1aff"
+		},
+		{
+			"type": "java",
+			"name": "Debug (Launch)",
+			"request": "launch",
+			"mainClass": "test.Tester",
+			"console": "integratedTerminal",
+			"projectName": "${workspaceFolderBasename}_538c1aff"
 		}
 	]
 }
