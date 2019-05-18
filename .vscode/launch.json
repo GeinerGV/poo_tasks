@@ -6,12 +6,16 @@
 	"configurations": [
 		{
 			"type": "java",
+			"name": "CodeLens (Launch) - Tester",
+			"request": "launch",
+			"mainClass": "test.Tester"
+		},
+		{
+			"type": "java",
 			"name": "Debug (Launch) - Current File",
 			"request": "launch",
 			"mainClass": "${file}",
 			"console": "integratedTerminal",
-			// "classPaths": ["bin/"],
-			// "preLaunchTask": "Compilador de archivo *.java",
 			"projectName": "${workspaceFolderBasename}_538c1aff"
 		}
 	]
