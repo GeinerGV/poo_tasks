@@ -7,7 +7,9 @@ public class Comprobante implements Serializable {
 	private String fecha;
 	private String ruc_emisor;
 	private String razon_emisor;
-	public Comprobante() {}
+	public Comprobante(int correlativo) {
+		this.correlativo = correlativo;
+	}
 	public Comprobante(int correlativo, String fch, String ruc, String razon) {
 		this.correlativo = correlativo;
 		fecha = fch;
