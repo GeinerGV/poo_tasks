@@ -3,6 +3,7 @@ package bean;
 import java.io.Serializable;
 
 public class Comprobante implements Serializable {
+	private static final long serialVersionUID = 1360126192258645909L;
 	private int correlativo;
 	private String fecha;
 	private String ruc_emisor;

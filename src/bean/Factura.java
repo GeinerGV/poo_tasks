@@ -1,6 +1,7 @@
 package bean;
 
 public class Factura extends Comprobante {
+	private static final long serialVersionUID = 7399101709666805038L;
 	private static int numeracion = 0;
 	private String ruc_cliente;
 	private String razon_cliente;

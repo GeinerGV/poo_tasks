@@ -22,6 +22,7 @@ import test.Tester;
 
 public class Ventana extends JFrame {
 
+	private static final long serialVersionUID = -8823178631194199148L;
 	private static final int num_empresas = 2;
 	private static final int comprobantes_por_empresa = 10;
 
@@ -56,9 +57,8 @@ public class Ventana extends JFrame {
 
 				Comprobante base;
 				Comprobante comprobante;
-				String empresa;
 				for (int i = 0; i < num_empresas; i++) {
-					empresa = getEmpresa();
+					getEmpresa();
 				}
 				for (int i = 0; i < num_empresas; i++) {
 					base = new Comprobante(rucs.get(i), empresas.get(i));
