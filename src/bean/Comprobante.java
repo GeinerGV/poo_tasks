@@ -10,9 +10,13 @@ public class Comprobante implements Serializable {
 	public Comprobante(int correlativo) {
 		this.correlativo = correlativo;
 	}
-	public Comprobante(int correlativo, String fch, String ruc, String razon) {
+	public Comprobante(int correlativo, String ruc, String razon) {
 		this.correlativo = correlativo;
-		fecha = fch;
+		ruc_emisor = ruc;
+		razon_emisor = razon;
+	}
+
+	public Comprobante(String ruc, String razon) {
 		ruc_emisor = ruc;
 		razon_emisor = razon;
 	}

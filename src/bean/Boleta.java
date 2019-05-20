@@ -9,6 +9,10 @@ public class Boleta extends Comprobante {
 		super(++numeracion);
 	}
 
+	public Boleta(Comprobante c) {
+		super(++numeracion, c.getRuc_emisor(), c.getRazon_emisor());
+	}
+
 	public static int getNumeracion() {
 		return numeracion;
 	}
@@ -35,6 +39,6 @@ public class Boleta extends Comprobante {
 
 	@Override
 	public String toString() {
-		return "Boleta ["+ toStringInChild() +"monto=" + monto + ", nombre_cliente=" + nombre_cliente + "]";
+		return "Boleta ["+ toStringInChild() +", monto=" + monto + ", nombre_cliente=" + nombre_cliente + "]";
 	}
 }
