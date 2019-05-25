@@ -1,20 +1,20 @@
 package com.ejemplo;
 
 public class Ejemplo1 {
-	public staic void main() {
-		int j;
+	public static void main(String[] args) {
+		String j = null;
 		try {
-			j = 1/j;
-			System.out.pritln("Pasamos por la división");
+			System.out.println(j.length());
+			System.out.println("Pasamos por la división");
 			
 		} catch(NullPointerException e) {
-			System.out.pritln("Capturamos un error en la división");
+			System.out.println("Capturamos un error en la división");
 		} catch(Exception e) {
 			System.out.println("Se produjo el siguiente error:");
 			e.printStackTrace();
 		} finally {
-			System.out.pritln("RetoCumplido¡");
+			System.out.println("RetoCumplido¡");
 		}
-		System.out.pritln("Seguimos con el programa");
+		System.out.println("Seguimos con el programa");
 	}
 }
