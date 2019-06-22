@@ -1,0 +1,25 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - JFAero",
+            "request": "launch",
+            "mainClass": "aeropuerto.JFAero",
+            "projectName": "poo_tasks_901fbd65"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - AMain",
+            "request": "launch",
+            "mainClass": "com.lap.test.AMain",
+            "projectName": "poo_tasks_901fbd65"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch) - Current File",
+            "request": "launch",
+            "mainClass": "${file}",
+            "console": "integratedTerminal"
+        }
+    ]
+}
